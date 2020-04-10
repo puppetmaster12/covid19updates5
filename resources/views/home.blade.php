@@ -4,6 +4,17 @@
         margin: 20px;
         padding: 20px;
     }
+    /* .dataTable{
+        table-layout: fixed;
+        overflow-x: auto;
+        white-space: nowrap;
+    } */
+    .container{
+        margin-bottom: 40px;
+    }
+    /* .dataTable td, th{
+        text-overflow: scroll;
+    } */
 </style>
 @section('content')
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css">
@@ -28,7 +39,7 @@
                 </div>
             </div>
         </div>
-        <table id="countries" class="table dataTable">
+        <table id="countries" class="table dataTable" width="100%;">
             <thead class="thead-dark">
               <tr>
                 <th scope="col">Country</th>
@@ -52,6 +63,7 @@
     var datatable = $('.dataTable').DataTable({
       processing: true,
       serverSide: true,
+      responsive: true,
       ajax: '{{('get-all-countries')}}',
       columns: [
           {data: 'Country', name: 'Country'},
