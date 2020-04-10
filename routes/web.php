@@ -16,3 +16,4 @@ Route::get('/home', 'HomeController@index');
 Route::get('/get-all-countries', 'HomeController@getAllCountries');
 Route::get('/your-country', 'HomeController@yourCountry');
 Route::get('/get-confirmed/{slug}', 'HomeController@yourCountry');
+Route::get('/sri-lanka', 'HomeController@sriLanka');

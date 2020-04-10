@@ -77,9 +77,9 @@ class HomeController extends Controller
                                              'slug', 'country_confirmed_all', 'country_recovered_all', 'country_deaths_all'));
     }
 
-    public function getCountryConfirmed(Request $request)
+    public function sriLanka()
     {
-
+        return view('sri-lanka');
     }
 
 }
